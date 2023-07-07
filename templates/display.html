@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result Page</title>
+  <style>
+    /* CSS styles go here */
+    .page-container {
+      padding: 20px;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ), url("https://static.vecteezy.com/system/resources/thumbnails/001/842/936/small/dark-blue-background-in-polygonal-style-vector.jpg") center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .report-container {
+      background-color: #fff;
+      width: 80%;
+      padding: 20px;
+      border-radius: 7px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-heading {
+      margin-bottom: 10px;
+    }
+
+    .chart-container {
+      margin-bottom: 20px;
+      height: 300px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #cccccc;
+      text-align: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .grid-column {
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 20% 80%;
+    }
+
+    .grid-label {
+      font-weight: bold;
+    }
+
+    .grid-value {
+      margin-left: 10px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 90px;
+      height: 50px;
+      margin-left: auto;
+      margin-bottom: auto;
+    }
+
+    .footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-logo {
+      width: 50px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #888;
+    }
+
+    .chart {
+      width: 500%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("https://www.pluscharts.com/wp-content/uploads/2019/03/doughnut.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <div class="report-container">
+      <div class="header">
+        <img class="logo" src="https://resource-bridge.com/wp-content/uploads/2022/09/logo_rb-1-2048x984.png" alt="Logo">
+      </div>
+      <h2 class="section-heading">Hi <span id="fullName"></span>,</h2>
+      <div class="grid-container">
+        <div class="grid-column">
+          <div class="grid-label">Phone Number:</div>
+          <div class="grid-value"><span id="contact"></span></div>
+          <div class="grid-label">Email:</div>
+          <div class="grid-value"><span id="email"></span></div>
+        </div>
+        <div class="grid-column">
+          <div class="grid-label">Company Name:</div>
+          <div class="grid-value"> <span id="currentCompany"></span></div>
+          <div class="grid-label">Industry:</div>
+          <div class="grid-value">Executive Search Firm</div>
+          <div class="grid-label">Company Size:</div>
+          <div class="grid-value"><span id="turnover"></span></div>
+        </div>
+        <div class="grid-column">
+          <div class="grid-label">Fixed CTC:</div>
+          <div class="grid-value">543</div>
+          <div class="grid-label">Variable:</div>
+          <div class="grid-value"><span id="currency"></span><span id="variablectc"></span></div>
+          <div class="grid-label">Esops:</div>
+          <div class="grid-value">6775</div>
+          <div class="grid-label">Long Term:</div>
+          <div class="grid-value">5456</div>
+          <div class="grid-label">Cash Benefits:</div>
+          <div class="grid-value">6757</div>
+          <div class="grid-label">Other Benefits:</div>
+          <div class="grid-value">4325</div>
+        </div>
+        <div class="grid-column">
+          <div class="chart-container">
+            <div class="chart"></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="section-heading">Total Annual CTC:<span id="currency"></span><span id="totalAnnual"></span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Turnover chart</th>
+            <th>Sales</th>
+            <th>Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>You are at</td>
+            <td>89%ile</td>
+            <td>94%ile</td>
+            <td>82%ile</td>
+          </tr>
+          <tr>
+            <td>95%ile are at</td>
+            <td>34 L</td>
+            <td>21 L</td>
+            <td>50 L</td>
+          </tr>
+          <tr>
+            <td>50%ile are at</td>
+            <td>17 L</td>
+            <td>10.5 L</td>
+            <td>25 L</td>
+          </tr>
+          <tr>
+            <td>% with respect to ESOP</td>
+            <td>43%</td>
+            <td>27%</td>
+            <td>86%</td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="footer">
+        <img class="footer-logo" src="https://resource-bridge.com/wp-content/uploads/2022/09/logo_rb-1-2048x984.png" alt="Footer Logo">
+        <p class="footer-text">© 2023 Resource Bridge. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+  <script>
+    // Retrieve form data from URL query parameters
+    var urlParams = new URLSearchParams(window.location.search);
+    var fullName = urlParams.get('fullName');
+    var contact = urlParams.get('contact');
+    var email = urlParams.get('email');
+    var currentCompany = urlParams.get('currentCompany');
+    var sector = urlParams.get('sector');
+    var turnover = urlParams.get('turnover');
+    var currency = urlParams.get('currency');
+    var fixedctc = parseFloat(urlParams.get('fixedctc'));
+    var variablectc = parseFloat(urlParams.get('variablectc'));
+    var totalAnnual = parseFloat(urlParams.get('totalAnnual'));
+
+    // Display form data
+    document.getElementById('fullName').textContent = fullName;
+    document.getElementById('contact').textContent = contact;
+    document.getElementById('email').textContent = email;
+    document.getElementById('currentCompany').textContent = currentCompany;
+    document.getElementById('sector').textContent = sector;
+    document.getElementById('turnover').textContent = turnover;
+    document.getElementById('currency').textContent = currency;
+    document.getElementById('fixedctc').textContent = fixedctc.toLocaleString();
+    document.getElementById('variablectc').textContent = variablectc.toLocaleString();
+    document.getElementById('totalAnnual').textContent = totalAnnual.toLocaleString();
+
+    // Salary breakdown data
+    var basic = parseFloat(totalAnnual) - fixedctc - variablectc;
+    var salaryData = [
+      { label: 'Fixed CtC', value: fixedctc },
+      { label: 'Variable CTC', value: variablectc },
+      { label: 'Total Annual', value: totalAnnual }
+    ];
+
+    // Create a pie chart
+    var data = [{
+      values: salaryData.map(item => item.value),
+      labels: salaryData.map(item => item.label),
+      type: 'pie'
+    }];
+
+    var layout = {
+      title: 'Salary Breakdown'
+    };
+
+    Plotly.newPlot('salary-chart', data, layout);
+  </script>
+</body>
+</html>
+
+
