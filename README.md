@@ -47,4 +47,4 @@ The project consists of the following files:
 
 ## Credits
 
-This project is created by Mahipal Singh. Feel free to modify and use it according to your needs.
+This project is created by Angela and Aaditya. Feel free to modify and use it according to your needs.
