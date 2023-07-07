@@ -27,7 +27,7 @@ The project consists of the following files:
 
 1. Start the Flask development server by running the following command:
     
-    ```pip install app.py ```
+    ```python app.py ```
 2. Open a web browser and go to `http://localhost:5000`.
 3. Fill in the required information in the form fields and submit the form.
 4. You will be redirected to the `display.html` page, where the entered data will be displayed along with the salary breakdown pie chart.
